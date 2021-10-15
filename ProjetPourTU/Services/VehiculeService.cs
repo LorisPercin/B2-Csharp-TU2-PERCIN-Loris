@@ -17,12 +17,12 @@ namespace ProjetPourTU.Services {
         /// Constructeur => pour plus de simplicité, j'initialise 3 véhicules dans le service
         /// </summary>
         public VehiculeService() {
-            
+           
         }
 
 
 
-        public List<Vehicule> getAll() {
+        public virtual List<Vehicule> getAll() {
             if (_mesVehicules == null) {
                 if (!File.Exists(jsonFile)){
                     _mesVehicules = new List<Vehicule>();
@@ -37,7 +37,7 @@ namespace ProjetPourTU.Services {
             
         }
 
-        public void Save() {
+        public virtual void Save() {
             using (var sr = new StreamWriter(jsonFile)) {
                 sr.Write(JsonSerializer.Serialize<List<Vehicule>>(_mesVehicules));
             }
