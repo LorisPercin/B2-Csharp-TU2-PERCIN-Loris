@@ -41,13 +41,13 @@ namespace ProjetTUTest
         [Test]
         public void AddVehiculeTest()
         {
-            Vehicule vehiculeTest = new Vehicule() { ID = 1, Immatriculation = "AAA", Nom = "A" };
+            Vehicule vehiculeTest = new Vehicule() { ID = 4, Immatriculation = "CCC", Nom = "C" };
             vehiculeService.AddVehicule(vehiculeTest);
 
-            Assert.AreEqual(1, listeVehicules.Count);
-            Assert.AreEqual(1, listeVehicules[0].ID);
-            Assert.AreEqual("AAA", listeVehicules[0].Immatriculation);
-            Assert.AreEqual("A", listeVehicules[0].Nom);
+            Assert.AreEqual(4, listeVehicules.Count);
+            Assert.AreEqual(4, listeVehicules[3].ID);
+            Assert.AreEqual("CCC", listeVehicules[3].Immatriculation);
+            Assert.AreEqual("C", listeVehicules[3].Nom);
         }
 
         //[Test]
