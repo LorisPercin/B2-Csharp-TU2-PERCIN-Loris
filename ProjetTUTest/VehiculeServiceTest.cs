@@ -57,5 +57,11 @@ namespace ProjetTUTest
             Assert.AreEqual("CCC", listeVehicules[3].Immatriculation);
             Assert.AreEqual("C", listeVehicules[3].Nom);
         }
+
+        [Test]
+        public void GetByIDTest()
+        {
+            Assert.AreEqual("A", vehiculeService.getByID(1).Nom);
+        }
     }
 }
