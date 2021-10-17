@@ -39,6 +39,14 @@ namespace ProjetTUTest
         }
 
         [Test]
+        public void CreerMessageTest()
+        {
+            string expected = "Véhicule : A, immatriculation : AAA\nVéhicule : B, immatriculation : BBB\nVéhicule : C, immatriculation : CCC";
+            string result = vehiculeService.CreerMessage();
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
         public void AddVehiculeTest()
         {
             Vehicule vehiculeTest = new Vehicule() { ID = 4, Immatriculation = "CCC", Nom = "C" };
@@ -49,13 +57,5 @@ namespace ProjetTUTest
             Assert.AreEqual("CCC", listeVehicules[3].Immatriculation);
             Assert.AreEqual("C", listeVehicules[3].Nom);
         }
-
-        //[Test]
-        //public void CreerMessageTest()
-        //{
-        //    string expected = "Véhicule : Peugeot 308, immatriculation : AAA\nVéhicule: Toyota Aygo, immatriculation: BBB\nVéhicule: Renault Clio, immatriculation: CCC";
-        //    string result = vehiculeService.CreerMessage();
-        //    Assert.AreEqual(expected, result);
-        //}
     }
 }
