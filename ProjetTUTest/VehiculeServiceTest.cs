@@ -52,7 +52,9 @@ namespace ProjetTUTest
             Vehicule vehiculeTest = new Vehicule() { ID = 4, Immatriculation = "CCC", Nom = "C" };
             vehiculeService.AddVehicule(vehiculeTest);
 
+            // Vérifie si un véhicule à bien été ajouté
             Assert.AreEqual(4, listeVehicules.Count);
+            // Vérifie si ce véhicule est bien vehiculeTest
             Assert.AreEqual(4, listeVehicules[3].ID);
             Assert.AreEqual("CCC", listeVehicules[3].Immatriculation);
             Assert.AreEqual("C", listeVehicules[3].Nom);
