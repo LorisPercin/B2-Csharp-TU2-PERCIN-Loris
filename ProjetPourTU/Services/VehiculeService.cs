@@ -17,7 +17,9 @@ namespace ProjetPourTU.Services {
         /// Constructeur => pour plus de simplicité, j'initialise 3 véhicules dans le service
         /// </summary>
         public VehiculeService() {
-           
+            AddVehicule(new Vehicule() { ID = 1, Immatriculation = "AAA", Nom = "A" });
+            AddVehicule(new Vehicule() { ID = 2, Immatriculation = "BBB", Nom = "B" });
+            AddVehicule(new Vehicule() { ID = 3, Immatriculation = "CCC", Nom = "C" });
         }
 
 
